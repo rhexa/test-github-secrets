@@ -5,7 +5,7 @@ jobs:
     name: add new variable
     runs-on: ubuntu-latest
     env:
-      - FIRST: hello
+      FIRST: hello
     steps:
       - name: Echo variable
         run: echo "{{ env.FIRST }}"
