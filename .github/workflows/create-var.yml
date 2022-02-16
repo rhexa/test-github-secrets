@@ -17,4 +17,5 @@ jobs:
       - name: Echo FURST
         run: echo "$FIRST"
       - name: Set variable to env file
-        run: echo "$FIRST" >> ${{ env.ENV_FILE }}
+        uses: ./.github/actions/write-to-env.yml
+        
