@@ -6,6 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       FIRST: hello
+      APP_NAME: ${{ github.repository }}
       ENV_FILE: ./.github/environment/main.env
     steps:
       - name: Echo variable
@@ -16,6 +17,6 @@ jobs:
         run: echo "${{ github.path }}"
       - name: Echo FURST
         run: echo "$FIRST"
-      - name: Set variable to env file
-        uses: ./.github/actions/write-to-env.yml
+      - name: Echo App name
+        run: echo "$APP_NAME"
         
