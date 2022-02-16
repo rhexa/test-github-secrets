@@ -8,8 +8,8 @@ jobs:
       FIRST: hello
     steps:
       - name: Echo variable
-        run: echo {{ env.FIRST }}
+        run: echo "${{ env.FIRST }}"
       - name: Echo action path
-        run: echo {{ github.action_path }}
+        run: echo "${{ github.action_path }}"
       - name: Echo path
-        run: echo {{ github.path }}
+        run: echo "${{ github.path }}"
