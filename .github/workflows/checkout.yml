@@ -7,8 +7,14 @@ jobs:
       - uses: actions/checkout@v2
       - run: git branch
       - name: base ref
-        run: echo ${{ github.base_ref }}
+        run: echo "${{ github.base_ref }}"
       - name: head ref
-        run: echo ${{ github.head_ref }}
+        run: echo "${{ github.head_ref }}"
       - name: ref
+        run: echo "${{ github.ref }}"
+      - name: base ref unquoted
+        run: echo ${{ github.base_ref }}
+      - name: head ref unquoted
+        run: echo ${{ github.head_ref }}
+      - name: ref unquoted
         run: echo ${{ github.ref }}
