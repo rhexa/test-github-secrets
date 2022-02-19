@@ -1,0 +1,14 @@
+name: testing checkout
+on: workflow_dispatch
+jobs:
+  checkout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: git branch
+      - name: base ref
+        run: echo ${{ github.base_ref }}
+      - name: head ref
+        run: echo ${{ github.head_ref }}
+      - name: ref
+        run: echo ${{ github.ref }}
